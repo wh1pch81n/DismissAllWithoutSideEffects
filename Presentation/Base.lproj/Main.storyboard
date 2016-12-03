@@ -1,26 +1,76 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kss-on-gaG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="2st-r4-V1k">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="Kss-on-gaG" customClass="ViewController" customModule="Presentation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="9dI-It-eX7"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ek-ru-35s"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Dtb-GE-0yY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQV-K7-4n1">
+                                <rect key="frame" x="21" y="20" width="37" height="30"/>
+                                <state key="normal" title="add 1"/>
+                                <connections>
+                                    <action selector="tappedAdd1:" destination="Kss-on-gaG" eventType="touchUpInside" id="i1n-ZK-0Yv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06E-j6-N1v">
+                                <rect key="frame" x="288" y="28" width="71" height="30"/>
+                                <state key="normal" title="dismiss all"/>
+                                <connections>
+                                    <action selector="dismissAll:" destination="Kss-on-gaG" eventType="touchUpInside" id="szv-KI-QtY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCx-uh-GFF">
+                                <rect key="frame" x="217" y="86" width="142" height="30"/>
+                                <state key="normal" title="dismiss all modal set"/>
+                                <connections>
+                                    <action selector="dismissAllSpecial:" destination="Kss-on-gaG" eventType="touchUpInside" id="Yqg-Xd-iwa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="gBu-7c-slM">
+                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="400"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="06E-j6-N1v" firstAttribute="top" secondItem="Dtb-GE-0yY" secondAttribute="topMargin" constant="28" id="4l6-RJ-Zdv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gBu-7c-slM" secondAttribute="trailing" id="7ke-wa-OTF"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="gBu-7c-slM" secondAttribute="bottom" id="Zmh-PS-nzc"/>
+                            <constraint firstItem="rQV-K7-4n1" firstAttribute="top" secondItem="Dtb-GE-0yY" secondAttribute="top" constant="20" id="bQr-uu-eOK"/>
+                            <constraint firstItem="WCx-uh-GFF" firstAttribute="trailing" secondItem="Dtb-GE-0yY" secondAttribute="trailingMargin" id="gTJ-qN-qdN"/>
+                            <constraint firstItem="06E-j6-N1v" firstAttribute="trailing" secondItem="Dtb-GE-0yY" secondAttribute="trailingMargin" id="kNV-MJ-nVY"/>
+                            <constraint firstItem="gBu-7c-slM" firstAttribute="top" secondItem="Dtb-GE-0yY" secondAttribute="topMargin" id="oQM-Ek-Z17"/>
+                            <constraint firstItem="rQV-K7-4n1" firstAttribute="leading" secondItem="Dtb-GE-0yY" secondAttribute="leadingMargin" constant="5" id="vDC-fP-73c"/>
+                            <constraint firstItem="WCx-uh-GFF" firstAttribute="top" secondItem="06E-j6-N1v" secondAttribute="bottom" constant="28" id="wee-SL-kHN"/>
+                            <constraint firstItem="gBu-7c-slM" firstAttribute="leading" secondItem="Dtb-GE-0yY" secondAttribute="leadingMargin" id="xBr-V2-D21"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="level" destination="gBu-7c-slM" id="wof-XB-URv"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0t-zB-yna" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="998" y="104"/>
         </scene>
     </scenes>
 </document>
